@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * The most basic element example base on regular WP shortcode.
  *
  * @see https://codex.wordpress.org/Shortcode
