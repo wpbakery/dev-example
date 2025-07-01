@@ -7,7 +7,7 @@
  * Author URI:        http://wpbakery.com
  * Text Domain:       vc-dev-example
  * Domain Path:       /languages
- * Version:           0.2
+ * Version:           1.0
  *
  * Requires at least: 4.9
  * Requires PHP:      5.6
