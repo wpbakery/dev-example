@@ -29,3 +29,4 @@ add_action( 'admin_notices', 'test_vc_map_dependencies' );
 include_once( __DIR__ . '/elements/basic/index.php' );
 include_once( __DIR__ . '/elements/with-custom-class/index.php' );
 include_once( __DIR__ . '/elements/html-template-base/index.php' );
+include_once( __DIR__ . '/elements/with-custom-param/index.php' );
