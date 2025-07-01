@@ -26,3 +26,4 @@ function test_vc_map_dependencies() {
 }
 add_action( 'admin_notices', 'test_vc_map_dependencies' );
 
+include_once( __DIR__ . '/elements/basic/index.php' );
