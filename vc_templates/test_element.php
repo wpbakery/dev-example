@@ -1,5 +1,4 @@
 <?php
-
 $attributes = ( shortcode_atts( array(
 	'value'       => 100,
 	'bgcolor'     => '#e0e4e1',

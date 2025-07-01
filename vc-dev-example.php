@@ -90,22 +90,14 @@ function text_vc_map_init() {
 		class WPBakeryShortCode_Test_Element extends WPBakeryShortCode {
 
 			public function __construct( $settings ) {
-				parent::__construct( $settings ); // !Important to call parent constructor to active all logic for shortcode.
+				parent::__construct( $settings ); // !Important to call parent constructor to activate all logic for shortcode.
 				$this->jsCssScripts();
-			}
-
-			public function vcLoadIframeJsCss() {
-				wp_enqueue_style( 'test_element_iframe' );
-			}
-
-			public function contentInline( $atts, $content ) {
-				$this->vcLoadIframeJsCss();
 			}
 
 			// Register scripts and styles there (for preview and frontend editor mode).
 			public function jsCssScripts() {
 				wp_register_script( 'test_element', plugins_url( 'assets/js/test_element.js', __FILE__ ), array( 'jquery' ), time(), false );
-				wp_register_style( 'test_element_iframe', plugins_url( 'assets/front_enqueue_iframe_css.css', __FILE__ ) );
+                wp_register_style( 'test_element_iframe', plugins_url( 'assets/front_enqueue_iframe_css.css', __FILE__ ) );
 			}
 
 			// Some custom helper function that can be used in content element template (vc_templates/test_element.php)
