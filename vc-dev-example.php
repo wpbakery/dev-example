@@ -17,12 +17,14 @@ defined( 'ABSPATH' ) || exit;
 
 const VC_DEV_EXAMPLE_VERSION = '1.0';
 
+/**
+ * Test if WPBakery Page Builder is installed and activated.
+ */
 function test_vc_map_dependencies() {
 	if ( ! defined( 'WPB_VC_VERSION' ) ) {
-		$plugin_data = get_plugin_data( __FILE__ );
 		echo '
         <div class="updated">
-          <p>' . sprintf( __( '<strong>%s</strong> requires <strong><a href="https://wpbakery.com/wpbakery-page-builder-license" target="_blank">WPBakery</a></strong> plugin to be installed and activated on your site.', 'vc-dev-example' ), $plugin_data['Name'] ) . '</p>
+            <p><strong>WPBakery: Kitchen sink custom elements</strong> ' . esc_html__( 'requires', 'vc-dev-example' ) . ' <strong><a href="https://wpbakery.com/wpbakery-page-builder-license" target="_blank">WPBakery</a></strong> ' . esc_html__( 'plugin to be installed and activated on your site.', 'vc-dev-example' ) . '</p>
         </div>';
 	}
 }
