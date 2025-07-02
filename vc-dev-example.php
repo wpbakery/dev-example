@@ -30,3 +30,4 @@ include_once( __DIR__ . '/elements/basic/index.php' );
 include_once( __DIR__ . '/elements/with-custom-class/index.php' );
 include_once( __DIR__ . '/elements/html-template-base/index.php' );
 include_once( __DIR__ . '/elements/with-custom-param/index.php' );
+include_once( __DIR__ . '/elements/container/index.php' );
