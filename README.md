@@ -11,14 +11,14 @@ This WordPress plugin demonstrates how to create custom elements for the [WPBake
 
 Clone this repo to your wp-content/plugins folder of your wordpress project.
 ```bash
-git clone https://github.com/wpbakery/vc-dev-example.git
+git clone https://github.com/wpbakery/dev-example.git
 ```
 Then go to wordpress dashboard plugins section, and activate the newly installed "WPBakery: Kitchen sink custom elements" plugin there.
 
 Alternatively, if you have WP-CLI set up, you can install and activate the plugin using a terminal command.
 ```bash
-wp plugin install https://github.com/wpbakery/vc-dev-example/archive/refs/heads/main.zip --activate --force;
-wp plugin activate vc-dev-example;
+wp plugin install https://github.com/wpbakery/dev-example/archive/refs/heads/main.zip --activate --force;
+wp plugin activate dev-example;
 ```
 
 After plugin activation, you can find all plugin elements in the "Test Elements" category in the WPBakery editor.
