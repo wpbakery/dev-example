@@ -26,14 +26,14 @@ if ( $value > 100 ) {
 	$value = 0;
 }
 
-// Enqueue Custom JS Script
+// Enqueue Custom JS Script.
 wp_enqueue_script( 'test_element' );
 
 // Enqueue Custom CSS Style
 // Must be previously registered in constructor (class WPBakeryShortCode_Test_Element extends WPBakeryShortCode).
 wp_enqueue_style( 'test_element_css' );
 
-// attributes for html
+// attributes for html.
 $radius       = 2 * (int) $attributes['radius'];
 $val1         = $value;
 $val2         = 100 - $value;
@@ -47,19 +47,19 @@ $inner_fill   = (int) $attributes['innerfill'];
 
 ?>
 
-<canvas class="piechartex" height="<?php echo $radius; ?>"
-		width="<?php echo $radius; ?>"
-		data-value-first="<?php echo $val1; ?>"
-		data-value-second="<?php echo $val2; ?>"
-		data-value-first-color="<?php echo $col1; ?>"
-		data-value-second-color="<?php echo $col2; ?>"
-		data-animation="<?php echo $animation; ?>"
-		data-segment-stroke-show="<?php echo $show_stroke; ?>"
-		data-segment-stroke-color="<?php echo $stroke_color; ?>"
-		data-segment-stroke-width="<?php echo $stroke_width; ?>"
-		data-percentage-inner-cutout="<?php echo $inner_fill; ?>"></canvas>
+<canvas class="piechartex" height="<?php echo esc_attr( $radius ); ?>"
+		width="<?php echo esc_attr( $radius ); ?>"
+		data-value-first="<?php echo esc_attr( $val1 ); ?>"
+		data-value-second="<?php echo esc_attr( $val2 ); ?>"
+		data-value-first-color="<?php echo esc_attr( $col1 ); ?>"
+		data-value-second-color="<?php echo esc_attr( $col2 ); ?>"
+		data-animation="<?php echo esc_attr( $animation ); ?>"
+		data-segment-stroke-show="<?php echo esc_attr( $show_stroke ); ?>"
+		data-segment-stroke-color="<?php echo esc_attr( $stroke_color ); ?>"
+		data-segment-stroke-width="<?php echo esc_attr( $stroke_width ); ?>"
+		data-percentage-inner-cutout="<?php echo esc_attr( $inner_fill ); ?>"></canvas>
 
 <div class="your_content_from_textarea_html">
-	<?php echo wpb_js_remove_wpautop( $content, true ); ?>
+	<?php echo wp_kses_post( wpb_js_remove_wpautop( $content, true ) ); ?>
 </div>
 
