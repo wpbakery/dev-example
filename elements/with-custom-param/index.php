@@ -5,8 +5,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
-// Include the custom param type registration and styles
-include_once __DIR__ . '/custom-param.php';
+// Include the custom param type registration and styles.
+require_once __DIR__ . '/custom-param.php';
 
 /**
  * Registers new element with WPBakery.
@@ -15,27 +15,27 @@ include_once __DIR__ . '/custom-param.php';
  *
  * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for all possible vc_map parameters.
  */
-add_action('vc_before_init', function() {
-    vc_map([
-        'name'        => __('With Custom Param', 'vc-dev-example'),
-        'base'        => 'vc_dev_example_custom_radio_param',
-        'description' => __('Element with custom multi checkboxes param type', 'vc-dev-example'),
-        'category'    => __('Test Elements', 'vc-dev-example'),
-        'params'      => [
-            [
-                'type'        => 'custom_radio',
-                'heading'     => __('Choose checkboxes', 'vc-dev-example'),
-                'param_name'  => 'checkbox_choice',
-                'options'     => [
-                    'option1' => __('Option 1', 'vc-dev-example'),
-                    'option2' => __('Option 2', 'vc-dev-example'),
-                    'option3' => __('Option 3', 'vc-dev-example'),
-                ],
-                'description' => __('Select one or more checkboxes.', 'vc-dev-example'),
-                'value'       => 'option1',
-            ],
-        ],
-    ]);
+add_action('vc_before_init', function () {
+	vc_map([
+		'name'        => __( 'With Custom Param', 'vc-dev-example' ),
+		'base'        => 'vc_dev_example_custom_radio_param',
+		'description' => __( 'Element with custom multi checkboxes param type', 'vc-dev-example' ),
+		'category'    => __( 'Test Elements', 'vc-dev-example' ),
+		'params'      => [
+			[
+				'type'        => 'custom_radio',
+				'heading'     => __( 'Choose checkboxes', 'vc-dev-example' ),
+				'param_name'  => 'checkbox_choice',
+				'options'     => [
+					'option1' => __( 'Option 1', 'vc-dev-example' ),
+					'option2' => __( 'Option 2', 'vc-dev-example' ),
+					'option3' => __( 'Option 3', 'vc-dev-example' ),
+				],
+				'description' => __( 'Select one or more checkboxes.', 'vc-dev-example' ),
+				'value'       => 'option1',
+			],
+		],
+	]);
 });
 
 /**
@@ -46,14 +46,13 @@ add_action('vc_before_init', function() {
  * @param array $atts
  * @return string
  */
-// Shortcode handler
-add_shortcode('vc_dev_example_custom_radio_param', function($atts) {
-    $atts = shortcode_atts([
-        'checkbox_choice' => 'option1',
-    ], $atts, 'vc_dev_example_custom_radio_param');
+add_shortcode('vc_dev_example_custom_radio_param', function ( $atts ) {
+	$atts = shortcode_atts([
+		'checkbox_choice' => 'option1',
+	], $atts, 'vc_dev_example_custom_radio_param');
 
-    $output = '<div class="custom-checkbox-param-frontend">';
-    $output .= '<strong>Selected checkbox(es):</strong> ' . esc_html($atts['checkbox_choice']);
-    $output .= '</div>';
-    return $output;
+	$output = '<div class="custom-checkbox-param-frontend">';
+	$output .= '<strong>Selected checkbox(es):</strong> ' . esc_html( $atts['checkbox_choice'] );
+	$output .= '</div>';
+	return $output;
 });
