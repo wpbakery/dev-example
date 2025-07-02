@@ -1,8 +1,21 @@
 <?php
+/**
+ * Additional class that helps
+ * with rendering and additional calculations WPBakery custom element.
+ */
 
 defined( 'ABSPATH' ) || exit;
 
 if ( class_exists( 'WPBakeryShortCode' ) ) {
+	/**
+	 * Custom WPBakery element class.
+	 *
+	 * @note Class name always should start with WPBakeryShortCode_ prefix.
+	 * Another part of name should be the same as the base name of the element specified in vc_map.
+	 * With appearance of underscores instead of dashes.
+	 *
+	 * @note you always should extend WPBakeryShortCode class to get all the necessary methods and properties.
+	 */
 	class WPBakeryShortCode_Test_Element extends WPBakeryShortCode {
 
 		/**
