@@ -51,7 +51,8 @@ After plugin activation, you can find all plugin elements in the "Test Elements"
 ### 4. **HTML Template Base**
 - **Folder:** `elements/html-template-base`
 - **Description:**
-  - Show how use html_template vc_map param to renders output using a separate HTML template file.
+  - Show how use html_template vc_map param to render output using a separate HTML template file.
+  - Show how to use the custom js_view vc_map param.
 
 ### 5. **Container**
 - **Folder:** `elements/container`
