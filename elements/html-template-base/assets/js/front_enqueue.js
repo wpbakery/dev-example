@@ -7,6 +7,10 @@ window.InlineShortcodeView_test_element = window.InlineShortcodeView.extend({
         console && console.log('InlineShortcodeView_test_element: render called.');
 		window.InlineShortcodeView_test_element.__super__.render.call(this); // it is recommended to call parent method to avoid new versions problems.
 
+		// This is example how you can re-render pieChart Doughnut in frontend editor.
+		var $i = this.$el.find('canvas');
+		window.vc.frame_window.TestElementRender($i);
+
 		// There is a place where you can implement logic for rendering / element param changing and all other javascript logic what you can imagine.
 		this.myCustomMethodToDebugShortcode();
 		return this;
@@ -22,7 +26,7 @@ window.InlineShortcodeView_test_element = window.InlineShortcodeView.extend({
 			obj[key] = settings;
 			str += JSON.stringify(obj) + '<br>';
 		}, this);
-		jQuery('<div>Green background will be visible only in fronteditor mode and css is stored in assets/front_enqueue_iframe_css.css <br/><br/> This json styled info was created "on the fly" from available settings: <br/>' + str + '</div>').appendTo(this.$el);
+		jQuery('<div>This json styled info was created "on the fly" from available settings and will be visble only on front editor: <br/>' + str + '</div>').appendTo(this.$el);
 	},
 	updated: function () {
         console && console.log('InlineShortcodeView_test_element: updated called.');
