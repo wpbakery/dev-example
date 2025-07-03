@@ -13,48 +13,48 @@ add_action( 'vc_before_init', function() {
      *
      * Here we specify all the parameters that help us see and edit the element in WPBakery editors.
      *
-     * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for all possible vc_map parameters.
+     * @see https://kb.wpbakery.com/docs/inner-api/wpb_map/ for all possible wpb_map parameters.
      */
-    vc_map([
-        'name'        => __( 'With Custom Class', 'vc-dev-example' ),
+    wpb_map([
+        'name'        => __( 'With Custom Class', 'wpb-dev-example' ),
         'base'        => 'custom_pricing_box',
-        'category'    => __( 'Test Elements', 'vc-dev-example' ),
-        'description' => __( 'Pricing box with discount logic that is calculated in php class.', 'vc-dev-example' ),
+        'category'    => __( 'Test Elements', 'wpb-dev-example' ),
+        'description' => __( 'Pricing box with discount logic that is calculated in php class.', 'wpb-dev-example' ),
         'params'      => [
             [
                 'type'       => 'textfield',
-                'heading'    => __( 'Title', 'vc-dev-example' ),
+                'heading'    => __( 'Title', 'wpb-dev-example' ),
                 'param_name' => 'title',
-                'value'      => __( 'Pro Plan', 'vc-dev-example' ),
+                'value'      => __( 'Pro Plan', 'wpb-dev-example' ),
             ],
             [
                 'type'       => 'textfield',
-                'heading'    => __( 'Base Price ($)', 'vc-dev-example' ),
+                'heading'    => __( 'Base Price ($)', 'wpb-dev-example' ),
                 'param_name' => 'base_price',
                 'value'      => '99',
             ],
             [
                 'type'       => 'textfield',
-                'heading'    => __( 'Discount (%)', 'vc-dev-example' ),
+                'heading'    => __( 'Discount (%)', 'wpb-dev-example' ),
                 'param_name' => 'discount',
                 'value'      => '10',
             ],
             [
                 'type'       => 'textfield',
-                'heading'    => __( 'Label', 'vc-dev-example' ),
+                'heading'    => __( 'Label', 'wpb-dev-example' ),
                 'param_name' => 'label',
-                'value'      => __( 'Best Value!', 'vc-dev-example' ),
+                'value'      => __( 'Best Value!', 'wpb-dev-example' ),
             ],
             [
                 'type'       => 'colorpicker',
-                'heading'    => __( 'Background Color', 'vc-dev-example' ),
+                'heading'    => __( 'Background Color', 'wpb-dev-example' ),
                 'param_name' => 'bg_color',
                 'value'      => '#ffffff',
             ],
             [
                 'type'       => 'textarea_html',
                 'value_type' => 'html',
-                'heading'    => __( 'Features List', 'vc-dev-example' ),
+                'heading'    => __( 'Features List', 'wpb-dev-example' ),
                 'param_name' => 'content',
                 'value'      => '<br />10 Projects<br />5 Team Members<br />Premium Support<br />',
             ],

@@ -41,9 +41,9 @@ add_action('init', function () {
 
 // Enqueue custom CSS for the param.
 add_action('admin_enqueue_scripts', function () {
-	wp_enqueue_style( 'vc-dev-example-custom-checkbox-param', plugins_url( 'assets/css/assets.css', __FILE__ ), [], VC_DEV_EXAMPLE_VERSION );
+	wp_enqueue_style( 'wpb-dev-example-custom-checkbox-param', plugins_url( 'assets/css/assets.css', __FILE__ ), [], WPB_DEV_EXAMPLE_VERSION );
 });
 // Enqueue custom CSS for the param on the frontend.
 add_action('wp_enqueue_scripts', function () {
-	wp_enqueue_style( 'vc-dev-example-custom-checkbox-param', plugins_url( 'assets/css/assets.css', __FILE__ ), [], VC_DEV_EXAMPLE_VERSION );
+	wp_enqueue_style( 'wpb-dev-example-custom-checkbox-param', plugins_url( 'assets/css/assets.css', __FILE__ ), [], WPB_DEV_EXAMPLE_VERSION );
 });

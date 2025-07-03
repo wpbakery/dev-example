@@ -10,10 +10,10 @@ add_action( 'vc_before_init', function () {
     require_once __DIR__ . '/custom-class.php';
 
 	// Register "container" content element. It will hold all your inner (child) content elements.
-	vc_map(
+	wpb_map(
 		[
 			'name'                    => __( 'Container', 'my-text-domain' ),
-			'category'                => __( 'Test Elements', 'vc-dev-example' ),
+			'category'                => __( 'Test Elements', 'wpb-dev-example' ),
 			'description'             => __( 'Container for other elements or nested shortcode realization', 'my-text-domain' ),
 			'base'                    => 'your_gallery',
 			// Use only|except attributes to limit child shortcodes.

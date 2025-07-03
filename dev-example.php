@@ -5,7 +5,7 @@
  * Description:       Study code to see how you can achieve interesting things in WPBakery with your own custom content elements
  * Author:            Michael M - WPBakery.com
  * Author URI:        http://wpbakery.com
- * Text Domain:       vc-dev-example
+ * Text Domain:       wpb-dev-example
  * Domain Path:       /languages
  * Version:           1.0
  *
@@ -15,20 +15,20 @@
 
 defined( 'ABSPATH' ) || exit;
 
-const VC_DEV_EXAMPLE_VERSION = '1.0';
+const WPB_DEV_EXAMPLE_VERSION = '1.0';
 
 /**
  * Test if WPBakery Page Builder is installed and activated.
  */
-function test_vc_map_dependencies() {
-	if ( ! defined( 'WPB_VC_VERSION' ) ) {
+function test_wpb_map_dependencies() {
+	if ( ! defined( 'WPB_WPB_VERSION' ) ) {
 		echo '
         <div class="updated">
-            <p><strong>WPBakery: Kitchen sink custom elements</strong> ' . esc_html__( 'requires', 'vc-dev-example' ) . ' <strong><a href="https://wpbakery.com/wpbakery-page-builder-license" target="_blank">WPBakery</a></strong> ' . esc_html__( 'plugin to be installed and activated on your site.', 'vc-dev-example' ) . '</p>
+            <p><strong>WPBakery: Kitchen sink custom elements</strong> ' . esc_html__( 'requires', 'wpb-dev-example' ) . ' <strong><a href="https://wpbakery.com/wpbakery-page-builder-license" target="_blank">WPBakery</a></strong> ' . esc_html__( 'plugin to be installed and activated on your site.', 'wpb-dev-example' ) . '</p>
         </div>';
 	}
 }
-add_action( 'admin_notices', 'test_vc_map_dependencies' );
+add_action( 'admin_notices', 'test_wpb_map_dependencies' );
 
 require_once __DIR__ . '/elements/basic/index.php';
 require_once __DIR__ . '/elements/with-custom-class/index.php';

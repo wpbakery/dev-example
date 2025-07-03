@@ -7,20 +7,20 @@
 
 defined( 'ABSPATH' ) || exit;
 
-add_action( 'vc_before_init', 'vc_dev_example_basic_element' );
-if ( ! function_exists( 'vc_dev_example_basic_element' ) ) :
+add_action( 'vc_before_init', 'wpb_dev_example_basic_element' );
+if ( ! function_exists( 'wpb_dev_example_basic_element' ) ) :
 	/**
 	 * Registers a basic element with WPBakery.
 	 *
 	 * Here we specify all the parameters that help us see and edit the element in WPBakery editors.
 	 *
-	 * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for all possible vc_map parameters.
+	 * @see https://kb.wpbakery.com/docs/inner-api/vpb_map/ for all possible wpb_map parameters.
 	 */
-	function vc_dev_example_basic_element() {
-		vc_map([
+	function wpb_dev_example_basic_element() {
+		wpb_map([
 			'name'        => __( 'Basic', 'vc-dev-example' ),
 			// base should be the same as the shortcode slug.
-			'base'        => 'vc_dev_example_basic_element',
+			'base'        => 'wpb_dev_example_basic_element',
 			'description' => __( 'Box with title and content', 'vc-dev-example' ),
 			'category'    => __( 'Test Elements', 'vc-dev-example' ),
 			'params'      => [
@@ -53,8 +53,8 @@ if ( ! function_exists( 'vc_dev_example_basic_element' ) ) :
 	}
 endif;
 
-add_shortcode( 'vc_dev_example_basic_element', 'vc_dev_example_basic_shortcode' );
-if ( ! function_exists( 'vc_dev_example_basic_shortcode' ) ) :
+add_shortcode( 'wpb_dev_example_basic_element', 'wpb_dev_example_basic_shortcode' );
+if ( ! function_exists( 'wpb_dev_example_basic_shortcode' ) ) :
 	/**
 	 * Shortcode handler for the custom box element.
 	 *
@@ -64,7 +64,7 @@ if ( ! function_exists( 'vc_dev_example_basic_shortcode' ) ) :
 	 * @param string $content
 	 * @return string
 	 */
-	function vc_dev_example_basic_shortcode( $atts, $content = '' ) {
+	function wpb_dev_example_basic_shortcode( $atts, $content = '' ) {
 		$atts = shortcode_atts([
 			'text'       => 'Welcome to My Box',
 			'content'    => '',

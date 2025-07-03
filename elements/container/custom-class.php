@@ -13,7 +13,7 @@ if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
 	 * otherwise, the element won't have all controls in the editor.
 	 *
 	 * @note class name always should start with WPBakeryShortCode_ prefix.
-	 * Another part of name should be the same as the base name of the element specified in vc_map with UPPER_SNAKE_CASE.
+	 * Another part of name should be the same as the base name of the element specified in wpb_map with UPPER_SNAKE_CASE.
 	 */
 	class WPBakeryShortCode_Your_Gallery extends WPBakeryShortCodesContainer {
 		/**
@@ -35,7 +35,7 @@ if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
 			$style = 'background-color:' . esc_attr( $atts['bg_color'] ) . ';';
 			$style .= 'padding: 30px; border-radius: 10px; margin-bottom: 20px;';
 
-			$output  = '<div class="vc-dev-example-container" style="' . esc_attr( $style ) . '">';
+			$output  = '<div class="wpb-dev-example-container" style="' . esc_attr( $style ) . '">';
 			$output .= do_shortcode( $content );
 			$output .= '</div>';
 

@@ -13,25 +13,25 @@ require_once __DIR__ . '/custom-param.php';
  *
  * Here we specify all the parameters that help us see and edit the element in WPBakery editors.
  *
- * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for all possible vc_map parameters.
+ * @see https://kb.wpbakery.com/docs/inner-api/wpb_map/ for all possible wpb_map parameters.
  */
 add_action('vc_before_init', function () {
-	vc_map([
-		'name'        => __( 'With Custom Param', 'vc-dev-example' ),
-		'base'        => 'vc_dev_example_custom_radio_param',
-		'description' => __( 'Element with custom multi checkboxes param type', 'vc-dev-example' ),
-		'category'    => __( 'Test Elements', 'vc-dev-example' ),
+	wpb_map([
+		'name'        => __( 'With Custom Param', 'wpb-dev-example' ),
+		'base'        => 'wpb_dev_example_custom_radio_param',
+		'description' => __( 'Element with custom multi checkboxes param type', 'wpb-dev-example' ),
+		'category'    => __( 'Test Elements', 'wpb-dev-example' ),
 		'params'      => [
 			[
 				'type'        => 'custom_radio',
-				'heading'     => __( 'Choose checkboxes', 'vc-dev-example' ),
+				'heading'     => __( 'Choose checkboxes', 'wpb-dev-example' ),
 				'param_name'  => 'checkbox_choice',
 				'options'     => [
-					'option1' => __( 'Option 1', 'vc-dev-example' ),
-					'option2' => __( 'Option 2', 'vc-dev-example' ),
-					'option3' => __( 'Option 3', 'vc-dev-example' ),
+					'option1' => __( 'Option 1', 'wpb-dev-example' ),
+					'option2' => __( 'Option 2', 'wpb-dev-example' ),
+					'option3' => __( 'Option 3', 'wpb-dev-example' ),
 				],
-				'description' => __( 'Select one or more checkboxes.', 'vc-dev-example' ),
+				'description' => __( 'Select one or more checkboxes.', 'wpb-dev-example' ),
 				'value'       => 'option1',
 			],
 		],
@@ -46,10 +46,10 @@ add_action('vc_before_init', function () {
  * @param array $atts
  * @return string
  */
-add_shortcode('vc_dev_example_custom_radio_param', function ( $atts ) {
+add_shortcode('wpb_dev_example_custom_radio_param', function ( $atts ) {
 	$atts = shortcode_atts([
 		'checkbox_choice' => 'option1',
-	], $atts, 'vc_dev_example_custom_radio_param');
+	], $atts, 'wpb_dev_example_custom_radio_param');
 
 	$output = '<div class="custom-checkbox-param-frontend">';
 	$output .= '<strong>Selected checkbox(es):</strong> ' . esc_html( $atts['checkbox_choice'] );
