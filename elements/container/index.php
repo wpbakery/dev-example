@@ -6,9 +6,9 @@
 
 defined( 'ABSPATH' ) || exit;
 
-require_once __DIR__ . '/custom-class.php';
-
 add_action( 'vc_before_init', function () {
+    require_once __DIR__ . '/custom-class.php';
+
 	// Register "container" content element. It will hold all your inner (child) content elements.
 	vc_map(
 		[
