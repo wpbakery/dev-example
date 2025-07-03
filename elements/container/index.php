@@ -12,9 +12,9 @@ add_action( 'vc_before_init', function () {
 	// Register "container" content element. It will hold all your inner (child) content elements.
 	wpb_map(
 		[
-			'name'                    => __( 'Container', 'my-text-domain' ),
+			'name'                    => __( 'Container', 'wpb-dev-example' ),
 			'category'                => __( 'Test Elements', 'wpb-dev-example' ),
-			'description'             => __( 'Container for other elements or nested shortcode realization', 'my-text-domain' ),
+			'description'             => __( 'Container for other elements or nested shortcode realization', 'wpb-dev-example' ),
 			'base'                    => 'your_gallery',
 			// Use only|except attributes to limit child shortcodes.
 			'as_parent'              => [
@@ -26,7 +26,7 @@ add_action( 'vc_before_init', function () {
 			'params'                 => [
 				[
 					'type'       => 'colorpicker',
-					'heading'    => __( 'Background Color', 'my-text-domain' ),
+					'heading'    => __( 'Background Color', 'wpb-dev-example' ),
 					'param_name' => 'bg_color',
 					'value'      => '#BED74247',
 				],
