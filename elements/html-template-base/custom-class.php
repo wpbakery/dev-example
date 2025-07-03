@@ -33,6 +33,9 @@ if ( class_exists( 'WPBakeryShortCode' ) ) {
 		 */
 		public function element_enqueueing_assets() {
 			wp_register_script( 'test_element', plugins_url( 'assets/js/test_element.js', __FILE__ ), [ 'jquery' ], time(), false );
+
+			// Enqueue Custom JS Script.
+			wp_enqueue_script( 'test_element' );
 		}
 
 		/**

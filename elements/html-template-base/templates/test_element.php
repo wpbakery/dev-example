@@ -26,9 +26,6 @@ if ( $value > 100 ) {
 	$value = 0;
 }
 
-// Enqueue Custom JS Script.
-wp_enqueue_script( 'test_element' );
-
 // Enqueue Custom CSS Style
 // Must be previously registered in constructor (class WPBakeryShortCode_Test_Element extends WPBakeryShortCode).
 wp_enqueue_style( 'test_element_css' );
