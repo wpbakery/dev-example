@@ -18,33 +18,33 @@ if ( ! function_exists( 'wpb_dev_example_basic_element' ) ) :
 	 */
 	function wpb_dev_example_basic_element() {
 		wpb_map([
-			'name'        => __( 'Basic', 'vc-dev-example' ),
+			'name'        => __( 'Basic', 'wpb-dev-example' ),
 			// base should be the same as the shortcode slug.
 			'base'        => 'wpb_dev_example_basic_element',
-			'description' => __( 'Box with title and content', 'vc-dev-example' ),
-			'category'    => __( 'Test Elements', 'vc-dev-example' ),
+			'description' => __( 'Box with title and content', 'wpb-dev-example' ),
+			'category'    => __( 'Test Elements', 'wpb-dev-example' ),
 			'params'      => [
 				[
 					'type'       => 'textfield',
-					'heading'    => __( 'Title', 'vc-dev-example' ),
+					'heading'    => __( 'Title', 'wpb-dev-example' ),
 					'param_name' => 'text',
-					'value'      => __( 'Welcome to My Box', 'vc-dev-example' ),
+					'value'      => __( 'Welcome to My Box', 'wpb-dev-example' ),
 				],
 				[
 					'type'       => 'textarea_html',
-					'heading'    => __( 'Content', 'vc-dev-example' ),
+					'heading'    => __( 'Content', 'wpb-dev-example' ),
 					'param_name' => 'content',
 					'value'      => '<p>This is some example content. You can customize it using the WPBakery editor.</p>',
 				],
 				[
 					'type'       => 'colorpicker',
-					'heading'    => __( 'Background Color', 'vc-dev-example' ),
+					'heading'    => __( 'Background Color', 'wpb-dev-example' ),
 					'param_name' => 'bg_color',
 					'value'      => '#f7f7f7',
 				],
 				[
 					'type'       => 'colorpicker',
-					'heading'    => __( 'Text Color', 'vc-dev-example' ),
+					'heading'    => __( 'Text Color', 'wpb-dev-example' ),
 					'param_name' => 'text_color',
 					'value'      => '#222222',
 				],
