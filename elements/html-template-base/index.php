@@ -21,13 +21,13 @@ add_action( 'vc_before_init', function () {
 	 */
 	wpb_map( [
 		// shortcode name.
-		'name' => __( 'HTML template base', 'wpb-dev-example' ),
+		'name' => __( 'HTML template base', 'dev-example' ),
 		// shortcode base slug [test_element].
 		'base' => 'test_element',
 		// param category tab in add elements view.
-		'category'                => __( 'Test Elements', 'wpb-dev-example' ),
+		'category'                => __( 'Test Elements', 'dev-example' ),
 		// element description in add elements view.
-		'description'             => __( 'Round chat rendering in template set in html_template wpb_map.', 'wpb-dev-example' ),
+		'description'             => __( 'Round chat rendering in template set in html_template wpb_map.', 'dev-example' ),
 		// don't show params window after adding.
 		'show_settings_on_create' => false,
 		// Depends on ordering in list, Higher weight first.
@@ -51,18 +51,18 @@ add_action( 'vc_before_init', function () {
 		'params'                  => [
 			[
 				'type'        => 'textfield',
-				'heading'     => __( 'Chart value(1-100)', 'wpb-dev-example' ),
+				'heading'     => __( 'Chart value(1-100)', 'dev-example' ),
 				'param_name'  => 'value',
-				'description' => __( 'Chart value(number).', 'wpb-dev-example' ),
+				'description' => __( 'Chart value(number).', 'dev-example' ),
 			],
 			[
 				'type'        => 'textarea_html',
 				'holder'      => 'div',
 				'class'       => 'custom_class_for_element', // will be outputted in the backend editor.
-				'heading'     => __( 'Content', 'wpb-dev-example' ),
+				'heading'     => __( 'Content', 'dev-example' ),
 				'param_name'  => 'content', // param_name for textarea_html must be named "content".
 				'value'       => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo..</p>',
-				'description' => __( 'Dummy text for content element.', 'wpb-dev-example' ),
+				'description' => __( 'Dummy text for content element.', 'dev-example' ),
 			],
 		],
 	] );

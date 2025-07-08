@@ -7,14 +7,14 @@
 defined( 'ABSPATH' ) || exit;
 
 add_action( 'vc_before_init', function () {
-	require_once __DIR__ . '/custom-class.php';
+    require_once __DIR__ . '/custom-class.php';
 
 	// Register "container" content element. It will hold all your inner (child) content elements.
-	wpb_map(
+	vc_map(
 		[
-			'name'                    => __( 'Container', 'wpb-dev-example' ),
-			'category'                => __( 'Test Elements', 'wpb-dev-example' ),
-			'description'             => __( 'Container for other elements or nested shortcode realization', 'wpb-dev-example' ),
+			'name'                    => __( 'Container', 'my-text-domain' ),
+			'category'                => __( 'Test Elements', 'vc-dev-example' ),
+			'description'             => __( 'Container for other elements or nested shortcode realization', 'my-text-domain' ),
 			'base'                    => 'your_gallery',
 			// Use only|except attributes to limit child shortcodes.
 			'as_parent'              => [
@@ -26,7 +26,7 @@ add_action( 'vc_before_init', function () {
 			'params'                 => [
 				[
 					'type'       => 'colorpicker',
-					'heading'    => __( 'Background Color', 'wpb-dev-example' ),
+					'heading'    => __( 'Background Color', 'my-text-domain' ),
 					'param_name' => 'bg_color',
 					'value'      => '#BED74247',
 				],

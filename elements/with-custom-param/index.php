@@ -17,21 +17,21 @@ require_once __DIR__ . '/custom-param.php';
  */
 add_action('vc_before_init', function () {
 	wpb_map([
-		'name'        => __( 'With Custom Param', 'wpb-dev-example' ),
+		'name'        => __( 'With Custom Param', 'dev-example' ),
 		'base'        => 'wpb_dev_example_custom_radio_param',
-		'description' => __( 'Element with custom multi checkboxes param type', 'wpb-dev-example' ),
-		'category'    => __( 'Test Elements', 'wpb-dev-example' ),
+		'description' => __( 'Element with custom multi checkboxes param type', 'dev-example' ),
+		'category'    => __( 'Test Elements', 'dev-example' ),
 		'params'      => [
 			[
 				'type'        => 'custom_radio',
-				'heading'     => __( 'Choose checkboxes', 'wpb-dev-example' ),
+				'heading'     => __( 'Choose checkboxes', 'dev-example' ),
 				'param_name'  => 'checkbox_choice',
 				'options'     => [
-					'option1' => __( 'Option 1', 'wpb-dev-example' ),
-					'option2' => __( 'Option 2', 'wpb-dev-example' ),
-					'option3' => __( 'Option 3', 'wpb-dev-example' ),
+					'option1' => __( 'Option 1', 'dev-example' ),
+					'option2' => __( 'Option 2', 'dev-example' ),
+					'option3' => __( 'Option 3', 'dev-example' ),
 				],
-				'description' => __( 'Select one or more checkboxes.', 'wpb-dev-example' ),
+				'description' => __( 'Select one or more checkboxes.', 'dev-example' ),
 				'value'       => 'option1',
 			],
 		],
