@@ -3,9 +3,9 @@
  * Plugin Name:       WPBakery: Kitchen sink custom elements
  * Plugin URI:        https://github.com/wpbakery/dev-example
  * Description:       Study code to see how you can achieve interesting things in WPBakery with your own custom content elements
- * Author:            Michael M - WPBakery.com
+ * Author:            WPBakery.com
  * Author URI:        http://wpbakery.com
- * Text Domain:       wpb-dev-example
+ * Text Domain:       dev-example
  * Domain Path:       /languages
  * Version:           1.0
  *
@@ -26,7 +26,7 @@ if ( ! function_exists( 'wpb_test_map_dependencies' ) ) :
 		if ( ! defined( 'WPB_WPB_VERSION' ) ) {
 			echo '
             <div class="updated">
-                <p><strong>' . esc_html__( 'WPBakery: Kitchen sink custom elements', 'wpb-dev-example' ) . '</strong> ' . esc_html__( 'requires', 'wpb-dev-example' ) . ' <strong><a href="https://wpbakery.com/wpbakery-page-builder-license" target="_blank">WPBakery</a></strong> ' . esc_html__( 'plugin to be installed and activated on your site.', 'wpb-dev-example' ) . '</p>
+                <p><strong>' . esc_html__( 'WPBakery: Kitchen sink custom elements', 'dev-example' ) . '</strong> ' . esc_html__( 'requires', 'dev-example' ) . ' <strong><a href="https://wpbakery.com/wpbakery-page-builder-license" target="_blank">WPBakery</a></strong> ' . esc_html__( 'plugin to be installed and activated on your site.', 'dev-example' ) . '</p>
             </div>';
 		}
 	}
