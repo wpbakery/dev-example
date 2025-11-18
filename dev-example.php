@@ -23,7 +23,7 @@ if ( ! function_exists( 'wpb_test_map_dependencies' ) ) :
 	 * Test if WPBakery Page Builder is installed and activated.
 	 */
 	function wpb_test_map_dependencies() {
-		if ( ! defined( 'WPB_WPB_VERSION' ) ) {
+		if ( ! defined( 'WPB_VC_VERSION' ) ) {
 			echo '
             <div class="updated">
                 <p><strong>' . esc_html__( 'WPBakery: Kitchen sink custom elements', 'dev-example' ) . '</strong> ' . esc_html__( 'requires', 'dev-example' ) . ' <strong><a href="https://wpbakery.com/wpbakery-page-builder-license" target="_blank">WPBakery</a></strong> ' . esc_html__( 'plugin to be installed and activated on your site.', 'dev-example' ) . '</p>
