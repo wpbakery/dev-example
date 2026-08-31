@@ -1,0 +1,30 @@
+/**
+ * Loaded via the "view_enqueue_css" wpb_map parameter.
+ *
+ * Unlike "admin_enqueue_css" / "front_enqueue_css" (editors only), this file is
+ * enqueued on the actual published page whenever the [test_element] shortcode is
+ * present in the content, so it is the right place for the element's real,
+ * visitor-facing styles.
+ *
+ * The [test_element] template (templates/test_element.php) prints the entered
+ * content inside ".your_content_from_textarea_html", so that is what we style
+ * here to prove the file is applied on the front end.
+ */
+.your_content_from_textarea_html {
+	margin-top: 16px;
+	padding: 16px 20px;
+	border-left: 4px solid #9fcb61;
+	border-radius: 4px;
+	background: #f6f8f2;
+	font-size: 15px;
+	line-height: 1.6;
+	color: #333333;
+}
+
+.your_content_from_textarea_html > *:first-child {
+	margin-top: 0;
+}
+
+.your_content_from_textarea_html > *:last-child {
+	margin-bottom: 0;
+}
