@@ -36,15 +36,18 @@ add_action( 'vc_before_init', function () {
 		// WPBakery will look for shortcode template in "wp-content/themes/your_theme/wpb_templates/test_element.php" automatically.
 		// In this example we are extending WPBakery from plugin, so we rewrite template.
 		'html_template'           => __DIR__ . '/templates/test_element.php',
-		// This will load extra js file in backend (when you edit page with WPBakery).
-		// use preg replace to be sure that "space" will not break logic.
-		'admin_enqueue_js'        => preg_replace( '/\s/', '%20', plugins_url( 'assets/js/admin_enqueue.js', __FILE__ ) ),
-		// This will load extra css file in backend (when you edit page with WPBakery).
-		'admin_enqueue_css'       => preg_replace( '/\s/', '%20', plugins_url( 'assets/css/admin_enqueue.css', __FILE__ ) ),
+		// This will load extra js file in backend editor (when you edit page with WPBakery).
+		'admin_enqueue_js'        => esc_url( plugins_url( 'assets/js/admin_enqueue.js', __FILE__ ) ),
+		// This will load extra css file in backend editor (when you edit page with WPBakery).
+		'admin_enqueue_css'       => esc_url( plugins_url( 'assets/css/admin_enqueue.css', __FILE__ ) ),
 		// This will load extra js file in frontend editor (when you edit page with WPBakery).
-		'front_enqueue_js'        => preg_replace( '/\s/', '%20', plugins_url( 'assets/js/front_enqueue.js', __FILE__ ) ),
+		'front_enqueue_js'        => esc_url( plugins_url( 'assets/js/front_enqueue.js', __FILE__ ) ),
 		// This will load extra css file in frontend editor (when you edit page with WPBakery).
-		'front_enqueue_css'       => preg_replace( '/\s/', '%20', plugins_url( 'assets/css/front_enqueue.css', __FILE__ ) ),
+		'front_enqueue_css'       => esc_url( plugins_url( 'assets/css/front_enqueue.css', __FILE__ ) ),
+		// This will load extra js file on the actual published page whenever the [test_element] shortcode is present.
+		'view_enqueue_js'         => esc_url( plugins_url( 'assets/js/view_enqueue.js', __FILE__ ) ),
+		// This will load extra css file on the actual published page whenever the [test_element] shortcode is present.
+		'view_enqueue_css'        => esc_url( plugins_url( 'assets/css/view_enqueue.css', __FILE__ ) ),
 		// JS View name for backend editor. Can be used to override or add some logic for shortcodes in backend (cloning/rendering/deleting/editing).
 		'js_view'                 => 'ViewTestElement',
 
